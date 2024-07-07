@@ -6,21 +6,21 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.akirachix.wezeshaapplication.databinding.ActivityMainBinding
+import com.akirachix.wezeshaapplication.databinding.ActivityHomepageBinding
+import com.akirachix.wezeshaapplication.databinding.ActivitySignUpBinding
 
-class MainActivity<TextInputLayout> : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+class Homepage : AppCompatActivity() {
+
+    lateinit var binding: ActivityHomepageBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        binding = ActivityHomepageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        binding.tvAccount.setOnClickListener {
+        binding.tvClickLogin.setOnClickListener {
             startActivity(Intent(this, SignUp::class.java))
         }
 
     }
-
-
 }

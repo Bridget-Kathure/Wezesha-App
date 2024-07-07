@@ -7,20 +7,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.akirachix.wezeshaapplication.databinding.ActivityMainBinding
+import com.akirachix.wezeshaapplication.databinding.ActivitySignUpBinding
 
-class MainActivity<TextInputLayout> : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+class SignUp : AppCompatActivity() {
+    lateinit var binding: ActivitySignUpBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
-        binding.tvAccount.setOnClickListener {
-            startActivity(Intent(this, SignUp::class.java))
+
+        binding.tvHaveAccount.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
         }
-
     }
-
-
 }
