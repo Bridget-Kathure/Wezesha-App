@@ -20,6 +20,34 @@ class MainActivity<TextInputLayout> : AppCompatActivity() {
             startActivity(Intent(this, SignUp::class.java))
         }
 
+        binding.btnLogin.setOnClickListener {
+            validateLogin()
+        }
+
+    }
+
+
+
+    fun validateLogin() {
+        var formErr = false
+        val firstName = binding.tvFullNames.text.toString()
+        if (firstName.isBlank()) {
+            formErr = true
+            binding.tilInput1.error = "Fullnames required"
+        }
+
+        val cooperativeID = binding.tvID.text.toString()
+        if (cooperativeID.isBlank()) {
+            formErr = true
+            binding.tilInput2.error = "Cooperative ID is required"
+        }
+
+    }
+
+    fun clearErrors(){
+        binding.tilInput1.error = null
+        binding.tilInput2.error = null
+
     }
 
 

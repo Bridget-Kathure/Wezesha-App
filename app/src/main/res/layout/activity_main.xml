@@ -126,6 +126,7 @@
         app:boxCornerRadiusTopStart="15dp"
         app:boxStrokeColor="#2A88BD"
         app:boxStrokeWidth="2dp"
+        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPassword">
