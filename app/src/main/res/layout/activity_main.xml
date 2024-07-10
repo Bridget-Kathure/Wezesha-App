@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/ivLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,6 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvID">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Input your cooperative Id" />
@@ -132,6 +133,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvPassword">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint=".................." />

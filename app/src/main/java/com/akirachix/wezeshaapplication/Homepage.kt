@@ -22,5 +22,9 @@ class Homepage : AppCompatActivity() {
             startActivity(Intent(this, SignUp::class.java))
         }
 
+        binding.btnGetStarted.setOnClickListener {
+            startActivity(Intent(this, SignUp::class.java))
+        }
+
     }
 }
