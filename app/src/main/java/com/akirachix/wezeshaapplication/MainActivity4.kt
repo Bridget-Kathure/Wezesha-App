@@ -16,7 +16,7 @@ class MainActivity4 : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.ivArrow3.setOnClickListener {
-            startActivity(Intent(this, MainActivity5::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             startActivity(intent)
         }
             binding.tvLoans.setOnClickListener {

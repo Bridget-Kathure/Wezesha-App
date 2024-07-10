@@ -15,6 +15,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="167dp"
         android:text="Milk Records"
+        android:textStyle="bold"
         android:textColor="#2A88BD"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,6 +29,7 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="22dp"
         android:text="Production"
+        android:textStyle="bold"
         android:textColor="#2A88BD"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,10 +51,10 @@
 
     <TextView
         android:id="@+id/date"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="66dp"
+        android:layout_height="43dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="80dp"
         android:text="Date"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/production"
@@ -64,26 +66,27 @@
         android:id="@+id/productionL"
         android:layout_width="174dp"
         android:layout_height="32dp"
-        android:layout_marginStart="150dp"
+        android:layout_marginStart="360dp"
         android:text="Production  (L)"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/date"
         app:layout_constraintEnd_toStartOf="@+id/sale"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/date"
-        app:layout_constraintTop_toTopOf="@+id/date" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/date"
+        app:layout_constraintVertical_bias="0.727" />
 
     <TextView
         android:id="@+id/sale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="70dp"
-        android:text="Sale (Litre)"
+        android:layout_marginEnd="210dp"
+        android:text="Sale (L)"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/productionL"
         app:layout_constraintEnd_toEndOf="@+id/tvPayment"
         app:layout_constraintStart_toEndOf="@+id/productionL"
-        app:layout_constraintTop_toTopOf="@+id/productionL" />
+        app:layout_constraintTop_toTopOf="@+id/productionL"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/date1"
@@ -207,6 +210,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow" />
+        app:srcCompat="@drawable/arrow"
+       android:src="@drawable/arrow"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
