@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:text=" Credit History"
+        android:textStyle="bold"
+        android:textColor="#2A88BD"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backArrow" />
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow" />
+
+    <TextView
+        android:id="@+id/tvBorrower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Borrower  Status"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tvActiveLoans2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="Active Loans"
+        app:layout_constraintStart_toEndOf="@+id/tvBorrower"
+        app:layout_constraintTop_toTopOf="@+id/tvBorrower" />
+
+    <TextView
+        android:id="@+id/tvStatements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Statement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.705"
+        app:layout_constraintStart_toEndOf="@+id/tvActiveLoans2"
+        app:layout_constraintTop_toTopOf="@+id/tvActiveLoans2" />
+
+    <RelativeLayout
+        android:id="@+id/rlBalance"
+        android:layout_width="380dp"
+        android:layout_height="150dp"
+        android:background="#2A88BD"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBorrower">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rlBalance"
+        app:srcCompat="@drawable/circle_svgrepo_com" />
+
+    <TextView
+        android:id="@+id/tvSaccoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        android:text="Sacco "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/tvSaccoName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name "
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvSaccoName"
+        app:layout_constraintTop_toBottomOf="@+id/tvSaccoName" />
+
+    <TextView
+        android:id="@+id/tvbalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="42dp"
+        android:text="ksh 160,000"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/rlBalance"
+        app:layout_constraintTop_toTopOf="@+id/rlBalance" />
+
+    <TextView
+        android:id="@+id/tvBalancemessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Your credit balance"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/tvbalance"
+        app:layout_constraintTop_toBottomOf="@+id/tvbalance" />
+
+    <TextView
+        android:id="@+id/tvAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Account :"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/rlBalance"
+        app:layout_constraintTop_toBottomOf="@+id/rlBalance" />
+
+    <TextView
+        android:id="@+id/tvAccount2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Max Loan Size:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvAccount"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccount" />
+
+    <TextView
+        android:id="@+id/tvAccount3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Max Balance:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvAccount2"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccount2" />
+
+    <TextView
+        android:id="@+id/tvAccount4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="On Time Repayment Rate:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvAccount3"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccount3" />
+
+    <TextView
+        android:id="@+id/tvAccount5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Due Date:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvAccount4"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccount4" />
+
+    <TextView
+        android:id="@+id/tvAccountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="123898"
+        app:layout_constraintStart_toEndOf="@+id/tvAccount"
+        app:layout_constraintTop_toTopOf="@+id/tvAccount" />
+
+    <TextView
+        android:id="@+id/tvAccountNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="ksh 250,000"
+        app:layout_constraintStart_toEndOf="@+id/tvAccount2"
+        app:layout_constraintTop_toTopOf="@+id/tvAccount2" />
+
+    <TextView
+        android:id="@+id/tvAccountNumber3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="160,000"
+        app:layout_constraintStart_toEndOf="@+id/tvAccount3"
+        app:layout_constraintTop_toTopOf="@+id/tvAccount3" />
+
+    <TextView
+        android:id="@+id/tvAccountNumber4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="45%"
+        app:layout_constraintStart_toEndOf="@+id/tvAccount4"
+        app:layout_constraintTop_toTopOf="@+id/tvAccount4" />
+
+    <TextView
+        android:id="@+id/tvAccountNumber5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="5th December 2025"
+        app:layout_constraintStart_toEndOf="@+id/tvAccount5"
+        app:layout_constraintTop_toTopOf="@+id/tvAccount5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

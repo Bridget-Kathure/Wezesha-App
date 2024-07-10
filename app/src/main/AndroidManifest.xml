@@ -13,6 +13,39 @@
         android:theme="@style/Theme.WezeshaApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Feedback"
+            android:exported="false" />
+        <activity
+            android:name=".CreditHistory"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity5"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".TransactionList"
+            android:exported="false" />
+        <activity
+            android:name=".MilkRecordings"
+            android:exported="false" />
+        <activity
+            android:name=".MilkRecords"
+            android:exported="false" />
+        <activity
+            android:name=".LandingPage"
+            android:exported="false" />
+        <activity
+            android:name=".HamburgerMenu"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

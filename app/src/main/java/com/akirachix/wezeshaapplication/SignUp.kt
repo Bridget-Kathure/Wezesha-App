@@ -2,11 +2,9 @@ package com.akirachix.wezeshaapplication
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.akirachix.wezeshaapplication.databinding.ActivityMainBinding
 import com.akirachix.wezeshaapplication.databinding.ActivitySignUpBinding
 
 class SignUp : AppCompatActivity() {
@@ -26,61 +24,133 @@ class SignUp : AppCompatActivity() {
         binding.btnSignup.setOnClickListener {
             validateSignUp()
         }
+
+        binding.etPhonenumber.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                val phoneNumber = s.toString()
+                if (phoneNumber.isNotEmpty() && !phoneNumber.matches(Regex("\\d+"))) {
+                    binding.tilPhoneNumber.error = "Please enter only numbers"
+                } else {
+                    binding.tilPhoneNumber.error = null
+                }
+            }
+        })
+
+        binding.etCoopId.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                val coopid = s.toString()
+                if (coopid.isNotEmpty() && !coopid.matches(Regex("\\d+"))) {
+                    binding.tilCoopID.error = "Please enter only integers"
+                } else {
+                    binding.tilCoopID.error = null
+                }
+            }
+        })
+
+        binding.etPassword.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                val password = s.toString()
+                if (password.isNotEmpty() && !password.matches(Regex("^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z\\d]+\$"))) {
+                    binding.tilPassword.error = "Password must contain at least one letter and one number"
+                } else {
+                    binding.tilPassword.error = null
+                }
+            }
+        })
     }
 
 
     fun validateSignUp() {
+
         var formErr = false
-        val firstName = binding.tvFirstname.text.toString()
+        val firstName = binding.etFirstname.text.toString()
         if (firstName.isBlank()) {
             formErr = true
             binding.tilFirstname.error = "First name is required"
         }
 
-        val surName = binding.tvSurName.text.toString()
+        val surName = binding.etSurname.text.toString()
         if (surName.isBlank()) {
             formErr = true
             binding.tilSurname.error = "Surname is required"
         }
 
-        val coopId = binding.tvId.text.toString()
+        val coopId = binding.etCoopId.text.toString()
         if (coopId.isBlank()) {
             formErr = true
             binding.tilCoopID.error = "Cooperative ID is required"
         }
 
-        val phonenumber = binding.tvPhoneNumber.text.toString()
-        if (phonenumber.isBlank()) {
+        val phoneNumber = binding.etPhonenumber.text.toString()
+        if (phoneNumber.isBlank()) {
             formErr = true
-            binding.tilPhoneNumber.error = "A codeHive ID is required"
+            binding.tilPhoneNumber.error = "A Phone number is required"
         }
 
-        val password = binding.tvSignupPassword.text.toString()
+        val password = binding.etPassword.text.toString()
         if (password.isBlank()) {
             formErr = true
             binding.tilPassword.error = "Password is required"
         }
-        val passwordConf = binding.tvConfirm.text.toString()
-        if(passwordConf.isBlank()) {
+
+        val passwordConfirmation = binding.etConfirmpassword.text.toString()
+        if (passwordConfirmation.isBlank()) {
             formErr = true
             binding.tilConfirmPassword.error = "Password confirmation is required"
         }
-        if(password != passwordConf){
+
+        if (password != passwordConfirmation) {
             formErr = true
-            binding.tilConfirmPassword.error = "password does not match"
-        }
-        if(!formErr){
-            // proceed to registration
+            binding.tilConfirmPassword.error = "Password does not match"
         }
 
-
-        fun clearErrors(){
-            binding.tilFirstname.error = null
-            binding.tilSurname.error = null
-            binding.tilPhoneNumber.error = null
-            binding.tilCoopID.error = null
-            binding.tilPassword.error = null
-            binding.tilConfirmPassword.error = null
+        if (!formErr) {
+            performRegistration(
+                firstName,
+                surName,
+                coopId,
+                phoneNumber,
+                password,
+                passwordConfirmation
+            )
         }
     }
+
+
+    fun clearErrors() {
+        binding.tilFirstname.error = null
+        binding.tilSurname.error = null
+        binding.tilPhoneNumber.error = null
+        binding.tilCoopID.error = null
+        binding.tilPassword.error = null
+        binding.tilConfirmPassword.error = null
+    }
+
+    private fun performRegistration(
+        firstName: String,
+        surName: String,
+        coopId: String,
+        phoneNumber: String,
+        password: String,
+        passwordConfirmation: String
+    ) {
+
+        val intent = Intent(this, LandingPage::class.java)
+        startActivity(intent)
+    }
+
+
 }
+

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/MilkRecords"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="167dp"
+        android:text="Milk Records"
+        android:textColor="#2A88BD"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/production"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="22dp"
+        android:text="Production"
+        android:textColor="#2A88BD"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MilkRecords" />
+
+    <TextView
+        android:id="@+id/tvPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="56dp"
+        android:text="Payment"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/production"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toEndOf="@+id/production"
+        app:layout_constraintTop_toTopOf="@+id/production" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:text="Date"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/production"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/production"
+        app:layout_constraintTop_toBottomOf="@+id/production" />
+
+    <TextView
+        android:id="@+id/productionL"
+        android:layout_width="174dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="150dp"
+        android:text="Production  (L)"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/date"
+        app:layout_constraintEnd_toStartOf="@+id/sale"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/date"
+        app:layout_constraintTop_toTopOf="@+id/date" />
+
+    <TextView
+        android:id="@+id/sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:text="Sale (Litre)"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/productionL"
+        app:layout_constraintEnd_toEndOf="@+id/tvPayment"
+        app:layout_constraintStart_toEndOf="@+id/productionL"
+        app:layout_constraintTop_toTopOf="@+id/productionL" />
+
+    <TextView
+        android:id="@+id/date1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="32dp"
+        android:text="2/04/2024"
+        app:layout_constraintBottom_toTopOf="@+id/date2"
+        app:layout_constraintEnd_toStartOf="@+id/production1"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <TextView
+        android:id="@+id/date2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="316dp"
+        android:layout_marginBottom="60dp"
+        android:text="3/05/2024"
+        app:layout_constraintBottom_toTopOf="@+id/date3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date1" />
+
+    <TextView
+        android:id="@+id/date3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="312dp"
+        android:text="5/04/2021"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date2" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Total"
+        app:layout_constraintEnd_toEndOf="@+id/date3"
+        app:layout_constraintStart_toStartOf="@+id/date3"
+        app:layout_constraintTop_toBottomOf="@+id/date3" />
+
+    <TextView
+        android:id="@+id/production1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="120dp"
+        android:text="20"
+        app:layout_constraintBottom_toBottomOf="@+id/date1"
+        app:layout_constraintEnd_toStartOf="@+id/s1"
+        app:layout_constraintTop_toTopOf="@+id/date1" />
+
+    <TextView
+        android:id="@+id/production2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="120dp"
+        android:text="34"
+        app:layout_constraintBottom_toBottomOf="@+id/date2"
+        app:layout_constraintEnd_toStartOf="@+id/s2"
+        app:layout_constraintTop_toTopOf="@+id/date2" />
+
+    <TextView
+        android:id="@+id/production3"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="120dp"
+        android:text="30"
+        app:layout_constraintBottom_toBottomOf="@+id/date3"
+        app:layout_constraintEnd_toStartOf="@+id/s3"
+        app:layout_constraintTop_toTopOf="@+id/date3" />
+
+    <TextView
+        android:id="@+id/s1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:text="75"
+        app:layout_constraintBottom_toBottomOf="@+id/production1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/production1" />
+
+    <TextView
+        android:id="@+id/s2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:text="80"
+        app:layout_constraintBottom_toBottomOf="@+id/production2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/production2" />
+
+    <TextView
+        android:id="@+id/s3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:text="77"
+        app:layout_constraintBottom_toBottomOf="@+id/production3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/production3" />
+
+    <TextView
+        android:id="@+id/Ksh"
+        android:layout_width="132dp"
+        android:layout_height="87dp"
+        android:text="Ksh 100,000"
+        app:layout_constraintEnd_toEndOf="@+id/s3"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="@+id/s3"
+        app:layout_constraintTop_toTopOf="@+id/total" />
+
+    <ImageView
+        android:id="@+id/arrowback"
+        android:layout_width="55dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
