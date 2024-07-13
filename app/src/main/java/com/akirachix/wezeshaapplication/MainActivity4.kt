@@ -19,7 +19,8 @@ class MainActivity4 : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             startActivity(intent)
         }
-            binding.tvLoans.setOnClickListener {
+
+        binding.tvLoans.setOnClickListener {
                 startActivity(Intent(this, MainActivity5::class.java))
                 startActivity(intent)
 
