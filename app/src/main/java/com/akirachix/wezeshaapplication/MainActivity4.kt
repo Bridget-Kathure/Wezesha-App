@@ -17,18 +17,18 @@ class MainActivity4 : AppCompatActivity() {
 
         binding.ivArrow3.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
-            startActivity(intent)
+//            startActivity(intent)
         }
 
         binding.tvLoans.setOnClickListener {
                 startActivity(Intent(this, MainActivity5::class.java))
-                startActivity(intent)
+//                startActivity(intent)
 
         }
 
         binding.tvStatement.setOnClickListener {
             startActivity(Intent(this, CreditHistory::class.java))
-            startActivity(intent)
+//            startActivity(intent)
 
         }
     }
