@@ -18,5 +18,9 @@ class MainActivity5 : AppCompatActivity() {
         binding.tvStatements.setOnClickListener {
             startActivity(Intent(this, CreditHistory::class.java))
         }
+
+        binding.tvBorrower.setOnClickListener {
+            startActivity(Intent(this, MainActivity4::class.java))
+        }
     }
 }

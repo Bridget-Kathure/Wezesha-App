@@ -20,7 +20,12 @@ class CreditHistory : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
         binding.tvActiveLoans2.setOnClickListener {
-            startActivity(Intent(this, CreditHistory::class.java))
+            startActivity(Intent(this, MainActivity5::class.java))
+        }
+
+
+        binding.tvBorrower2.setOnClickListener {
+            startActivity(Intent(this, MainActivity4::class.java))
         }
     }
 
