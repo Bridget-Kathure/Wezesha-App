@@ -19,9 +19,9 @@ class SignUp : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
-        binding.btnSignup.setOnClickListener {
-            validateSignUp()
-        }
+//        binding.btnSignup.setOnClickListener {
+//            validateSignUp()
+//        }
 
 
         binding.etFirstname.addTextChangedListener(object : TextWatcher {

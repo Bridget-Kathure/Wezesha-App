@@ -19,6 +19,10 @@ class Feedback: AppCompatActivity() {
             startActivity(Intent(this, LandingPage::class.java))
         }
 
+        binding.btnSubmit.setOnClickListener {
+            startActivity(Intent(this, Success::class.java))
+        }
+
 
 
     }
