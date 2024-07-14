@@ -40,6 +40,23 @@ class MainActivity<TextInputLayout> : AppCompatActivity() {
                     binding.tilInput2.error = null
                 }
             }
+
+        })
+
+
+        binding.etFullNames.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                val firstName = s.toString()
+                if (firstName.isNotEmpty() && !firstName.matches(Regex("[a-zA-Z\\s]+"))) {
+                    binding.tilInput1.error = "Please enter only letters and spaces"
+                } else {
+                    binding.tilInput1.error = null
+                }
+            }
         })
 
         binding.etPassword.addTextChangedListener(object : TextWatcher {

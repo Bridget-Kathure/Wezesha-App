@@ -46,29 +46,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivSignupLogo" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilFirstname"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        app:boxCornerRadiusBottomEnd="15dp"
-        app:boxCornerRadiusBottomStart="15dp"
-        app:boxCornerRadiusTopEnd="15dp"
-        app:boxCornerRadiusTopStart="15dp"
-        app:boxStrokeColor="@color/blue"
-        app:boxStrokeWidth="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQuestion1">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etFirstname"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFirstname"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="John" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeColor="@color/blue"
+            app:boxStrokeWidth="2dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestion1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFirstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Input first name"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tvQuestion2"
@@ -94,6 +96,7 @@
         app:boxCornerRadiusTopStart="15dp"
         app:boxStrokeColor="@color/blue"
         app:boxStrokeWidth="2dp"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvQuestion2">
@@ -102,7 +105,8 @@
             android:id="@+id/etSurname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Doe" />
+            android:hint="Input Surname"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -129,6 +133,7 @@
         app:boxCornerRadiusTopStart="15dp"
         app:boxStrokeColor="@color/blue"
         app:boxStrokeWidth="2dp"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvQuestion3">
@@ -137,7 +142,8 @@
             android:id="@+id/etCoopId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="123654" />
+            android:hint="123654"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -164,6 +170,7 @@
         app:boxCornerRadiusTopStart="15dp"
         app:boxStrokeColor="@color/blue"
         app:boxStrokeWidth="2dp"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvQuestion4">
@@ -172,7 +179,8 @@
             android:id="@+id/etPhonenumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="071234567" />
+            android:hint="Input Phone Number"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -199,6 +207,7 @@
         app:boxCornerRadiusTopStart="15dp"
         app:boxStrokeColor="@color/blue"
         app:boxStrokeWidth="2dp"
+        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSignupPassword">
@@ -207,7 +216,8 @@
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="................" />
+            android:hint="Input password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -235,6 +245,7 @@
         app:boxCornerRadiusTopStart="15dp"
         app:boxStrokeColor="@color/blue"
         app:boxStrokeWidth="2dp"
+        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvConfirm">
@@ -243,7 +254,8 @@
             android:id="@+id/etConfirmpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="....................." />
+            android:hint="Input password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -259,16 +271,33 @@
             app:layout_constraintTop_toBottomOf="@+id/tilConfirmPassword" />
 
         <TextView
-            android:id="@+id/tvHaveAccount"
+            android:id="@+id/tvHave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="10dp"
-            android:text="Already have an account? Login"
+            android:layout_marginEnd="45dp"
+            android:text="Already have an account? "
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvHaveAccount"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnSignup" />
+
+        <TextView
+            android:id="@+id/tvHaveAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-40dp"
+            android:layout_marginEnd="32dp"
+            android:text="Login"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvHave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvHave"
+            app:layout_constraintTop_toTopOf="@+id/tvHave" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

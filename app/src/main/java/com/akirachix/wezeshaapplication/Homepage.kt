@@ -19,7 +19,7 @@ class Homepage : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.tvClickLogin.setOnClickListener {
-            startActivity(Intent(this, SignUp::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
         binding.btnGetStarted.setOnClickListener {
