@@ -15,8 +15,6 @@ class SignUp : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         binding.tvHaveAccount.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
@@ -24,6 +22,38 @@ class SignUp : AppCompatActivity() {
         binding.btnSignup.setOnClickListener {
             validateSignUp()
         }
+
+
+        binding.etFirstname.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                val firstName = s.toString()
+                if (firstName.isNotEmpty() && !firstName.matches(Regex("[a-zA-Z\\s]+"))) {
+                    binding.tilFirstname.error = "Please enter only letters and spaces"
+                } else {
+                    binding.tilFirstname.error = null
+                }
+            }
+        })
+
+
+        binding.etSurname.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                val surname = s.toString()
+                if (surname.isNotEmpty() && !surname.matches(Regex("[a-zA-Z\\s]+"))) {
+                    binding.tilSurname.error = "Please enter only letters and spaces"
+                } else {
+                    binding.tilSurname.error = null
+                }
+            }
+        })
 
         binding.etPhonenumber.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -71,20 +101,18 @@ class SignUp : AppCompatActivity() {
         })
     }
 
-
     fun validateSignUp() {
-
         var formErr = false
         val firstName = binding.etFirstname.text.toString()
-        if (firstName.isBlank()) {
+        if (firstName.isBlank() || !firstName.matches(Regex("[a-zA-Z\\s]+"))) {
             formErr = true
-            binding.tilFirstname.error = "First name is required"
+            binding.tilFirstname.error = "Please enter a valid first name (letters and spaces only)"
         }
 
         val surName = binding.etSurname.text.toString()
-        if (surName.isBlank()) {
+        if (surName.isBlank() || !surName.matches(Regex("[a-zA-Z\\s]+"))) {
             formErr = true
-            binding.tilSurname.error = "Surname is required"
+            binding.tilSurname.error = "Please enter a valid surname (letters and spaces only)"
         }
 
         val coopId = binding.etCoopId.text.toString()
@@ -128,7 +156,6 @@ class SignUp : AppCompatActivity() {
         }
     }
 
-
     fun clearErrors() {
         binding.tilFirstname.error = null
         binding.tilSurname.error = null
@@ -146,11 +173,7 @@ class SignUp : AppCompatActivity() {
         password: String,
         passwordConfirmation: String
     ) {
-
         val intent = Intent(this, LandingPage::class.java)
         startActivity(intent)
     }
-
-
 }
-

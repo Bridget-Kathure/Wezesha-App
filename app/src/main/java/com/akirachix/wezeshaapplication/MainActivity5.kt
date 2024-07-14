@@ -22,5 +22,8 @@ class MainActivity5 : AppCompatActivity() {
         binding.tvBorrower.setOnClickListener {
             startActivity(Intent(this, MainActivity4::class.java))
         }
+
+
+
     }
 }

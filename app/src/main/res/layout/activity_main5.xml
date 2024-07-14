@@ -133,7 +133,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvbalance" />
 
     <TextView
-        android:id="@+id/tvAccount"
+        android:id="@+id/tvAccountName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -149,8 +149,8 @@
         android:layout_marginTop="24dp"
         android:text="Max Loan Size:"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tvAccount"
-        app:layout_constraintTop_toBottomOf="@+id/tvAccount" />
+        app:layout_constraintStart_toStartOf="@+id/tvAccountName"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccountName" />
 
     <TextView
         android:id="@+id/tvAccount3"
@@ -188,8 +188,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="123898"
-        app:layout_constraintStart_toEndOf="@+id/tvAccount"
-        app:layout_constraintTop_toTopOf="@+id/tvAccount" />
+        app:layout_constraintStart_toEndOf="@+id/tvAccountName"
+        app:layout_constraintTop_toTopOf="@+id/tvAccountName" />
 
     <TextView
         android:id="@+id/tvAccountNumber2"
