@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/tvAccountDFR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DFR36547H"
+        app:layout_constraintEnd_toStartOf="@+id/tvDate1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="22/04/2024"
+        app:layout_constraintEnd_toStartOf="@+id/tvAmount1"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toEndOf="@+id/tvAccountDFR"
+        app:layout_constraintTop_toTopOf="@+id/tvAccountDFR" />
+
+    <TextView
+        android:id="@+id/tvAmount1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:text="20,000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDate1"
+        app:layout_constraintTop_toTopOf="@+id/tvDate1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
