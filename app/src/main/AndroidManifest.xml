@@ -22,28 +22,28 @@
             android:name=".Feedback"
             android:exported="false" />
         <activity
-            android:name=".CreditHistory"
+            android:name=".CreditHistoryStatement"
             android:exported="false" />
         <activity
-            android:name=".MainActivity5"
+            android:name=".CreditHistoryActiveLoans"
             android:exported="false" />
         <activity
-            android:name=".MainActivity4"
+            android:name=".CreditHistoryStatus"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".TransactionsProfit"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".TransactionsExpenses"
             android:exported="false" />
         <activity
             android:name=".TransactionList"
             android:exported="false" />
         <activity
-            android:name=".MilkRecordings"
+            android:name=".MilkRecordsPayments"
             android:exported="false" />
         <activity
-            android:name=".MilkRecords"
+            android:name=".MilkRecordsProduction"
             android:exported="false" />
         <activity
             android:name=".LandingPage"
@@ -52,7 +52,7 @@
             android:name=".HamburgerMenu"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".SignUp"

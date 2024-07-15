@@ -3,9 +3,7 @@ package com.akirachix.wezeshaapplication
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.akirachix.wezeshaapplication.databinding.ActivityHamburgerMenuBinding
 import com.akirachix.wezeshaapplication.databinding.ActivityLandingPageBinding
-import com.akirachix.wezeshaapplication.databinding.ActivityMainBinding
 
 class LandingPage : AppCompatActivity() {
     lateinit var binding: ActivityLandingPageBinding
@@ -26,13 +24,13 @@ class LandingPage : AppCompatActivity() {
         }
 
         binding.tvCredit.setOnClickListener {
-            val intent = Intent(this, MainActivity4::class.java)
+            val intent = Intent(this, CreditHistoryStatus::class.java)
             startActivity(intent)
         }
 
 
         binding.tvRecordstext.setOnClickListener {
-            val intent = Intent(this, MilkRecords::class.java)
+            val intent = Intent(this, MilkRecordsProduction::class.java)
             startActivity(intent)
         }
 

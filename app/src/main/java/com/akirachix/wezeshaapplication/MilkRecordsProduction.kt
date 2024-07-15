@@ -2,19 +2,15 @@ package com.akirachix.wezeshaapplication
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.akirachix.wezeshaapplication.databinding.ActivityHamburgerMenuBinding
-import com.akirachix.wezeshaapplication.databinding.ActivityMilkRecordsBinding
+import com.akirachix.wezeshaapplication.databinding.ActivityMilkRecordsProductionBinding
 
-class MilkRecords : AppCompatActivity() {
+class MilkRecordsProduction : AppCompatActivity() {
 
-    lateinit var  binding: ActivityMilkRecordsBinding
+    lateinit var  binding: ActivityMilkRecordsProductionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding= ActivityMilkRecordsBinding.inflate(layoutInflater)
+        binding= ActivityMilkRecordsProductionBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
@@ -24,7 +20,7 @@ class MilkRecords : AppCompatActivity() {
         }
 
         binding.tvPayment.setOnClickListener {
-            val intent = Intent(this, MilkRecordings::class.java)
+            val intent = Intent(this, MilkRecordsPayments::class.java)
             startActivity(intent)
         }
 

@@ -2,21 +2,18 @@ package com.akirachix.wezeshaapplication
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.akirachix.wezeshaapplication.databinding.ActivityMain2Binding
+import com.akirachix.wezeshaapplication.databinding.ActivityTransactionsExpensesBinding
 
-class MainActivity2 : AppCompatActivity() {
-        lateinit var binding: ActivityMain2Binding
+class TransactionsExpenses : AppCompatActivity() {
+        lateinit var binding: ActivityTransactionsExpensesBinding
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            binding = ActivityMain2Binding.inflate(layoutInflater)
+            binding = ActivityTransactionsExpensesBinding.inflate(layoutInflater)
             setContentView(binding.root)
 
             binding.textView4.setOnClickListener {
-                val intent = Intent(this, MainActivity3::class.java)
+                val intent = Intent(this, TransactionsProfit::class.java)
                 startActivity(intent)
 
             }

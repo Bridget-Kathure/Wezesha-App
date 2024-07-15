@@ -16,7 +16,7 @@ class SignUp : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.tvHaveAccount.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, Login::class.java))
         }
 
         binding.btnSubmit.setOnClickListener {

@@ -34,7 +34,7 @@ class HamburgerMenu : AppCompatActivity() {
         }
 
         binding.tvMilkRecords.setOnClickListener {
-            val intent = Intent(this, MilkRecords::class.java)
+            val intent = Intent(this, MilkRecordsProduction::class.java)
             startActivity(intent)
         }
 

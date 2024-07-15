@@ -2,33 +2,29 @@ package com.akirachix.wezeshaapplication
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
-import com.akirachix.wezeshaapplication.databinding.ActivityCreditHistoryBinding
+import com.akirachix.wezeshaapplication.databinding.ActivityCreditHistoryStatementBinding
 
-class CreditHistory : AppCompatActivity() {
+class CreditHistoryStatement : AppCompatActivity() {
 
-    lateinit var binding: ActivityCreditHistoryBinding
+    lateinit var binding: ActivityCreditHistoryStatementBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCreditHistoryBinding.inflate(layoutInflater)
+        binding = ActivityCreditHistoryStatementBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.rvMain.layoutManager = LinearLayoutManager(this)
         creditHistoryList()
         binding.backArrow.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, Login::class.java))
         }
         binding.tvActiveLoans2.setOnClickListener {
-            startActivity(Intent(this, MainActivity5::class.java))
+            startActivity(Intent(this, CreditHistoryActiveLoans::class.java))
         }
 
 
         binding.tvBorrower2.setOnClickListener {
-            startActivity(Intent(this, MainActivity4::class.java))
+            startActivity(Intent(this, CreditHistoryStatus::class.java))
         }
     }
     fun creditHistoryList() {

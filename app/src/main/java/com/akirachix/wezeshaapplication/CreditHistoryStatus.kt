@@ -2,32 +2,29 @@ package com.akirachix.wezeshaapplication
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.akirachix.wezeshaapplication.databinding.ActivityMain4Binding
+import com.akirachix.wezeshaapplication.databinding.ActivityCreditHistoryStatusBinding
 
-class MainActivity4 : AppCompatActivity() {
-    lateinit var binding: ActivityMain4Binding
+class CreditHistoryStatus : AppCompatActivity() {
+    lateinit var binding: ActivityCreditHistoryStatusBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMain4Binding.inflate(layoutInflater)
+        binding = ActivityCreditHistoryStatusBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.ivArrow3.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, Login::class.java))
 //            startActivity(intent)
         }
 
         binding.tvLoans.setOnClickListener {
-                startActivity(Intent(this, MainActivity5::class.java))
+                startActivity(Intent(this, CreditHistoryActiveLoans::class.java))
 //                startActivity(intent)
 
         }
 
         binding.tvStatement.setOnClickListener {
-            startActivity(Intent(this, CreditHistory::class.java))
+            startActivity(Intent(this, CreditHistoryStatement::class.java))
 //            startActivity(intent)
 
         }
